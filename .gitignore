@@ -4,3 +4,5 @@
 .Ruserdata
 prototyping/*
 !prototyping/README.md
+config/*
+!config/README.md
