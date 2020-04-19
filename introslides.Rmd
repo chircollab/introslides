@@ -22,8 +22,19 @@ params:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+# override custom configuration if present
+proj_root <- here::here()
+config_path <- fs::path(proj_root, "config", "config.yml")
+
+params_custom <- params
+if (fs::file_exists(config_path)) {
+  # override params with the config stuff
+  params_custom <- config::get(file = config_path)
+}
+
 # set up key variables for processing later
-collab_wiki_link <- glue::glue("{collab_github}/wiki", collab_github = params$collab_github)
+collab_wiki_link <- glue::glue("{collab_github}/wiki", collab_github = params_custom$collab_github)
 ```
 
 
@@ -43,11 +54,11 @@ knitr::include_graphics("http://bit.ly/momtocat")
 
 # Code of Conduct
 
-The `r params$collab_long` (henceforth referred to as the "`r params$collab_short`") is dedicated to providing a **harrassment-free experience** for participants at our event.  The `r params$collab_short` is an informal, community-led hackathon intended for prefessional networking and collaboration in the R community.
+The `r params_custom$collab_long` (henceforth referred to as the "`r params_custom$collab_short`") is dedicated to providing a **harrassment-free experience** for participants at our event.  The `r params_custom$collab_short` is an informal, community-led hackathon intended for prefessional networking and collaboration in the R community.
 
 An inclusive space free of harrassment encourages interaction among diverse groups.  We want to **make certain our event is welcoming and encourages participants to be involved** moving forward.
 
-Read more: `r params$coc_link`
+Read more: `r params_custom$coc_link`
 
 ---
 
@@ -56,8 +67,8 @@ Read more: `r params$coc_link`
 Several options:
 
 * Message event organizers
-* Contact `r params$collab_email`
-* Fill out anonymous [report form](`r params$coc_report_link`)
+* Contact `r params_custom$collab_email`
+* Fill out anonymous [report form](`r params_custom$coc_report_link`)
 * IF needed, organizers can set up a chat with individual(s) affected
 * Let us know if you see things we should be aware of
 
@@ -73,7 +84,7 @@ Several options:
 
 * __Zoom__ troubleshooting - **TODO add points of contact**
 * __Slack__ -  **TODO add points of contact**
-    + ``r params$collab_slack_faq`` for questions
+    + ``r params_custom$collab_slack_faq`` for questions
 * __GitHub__ access - **TODO add points of contact**
 
 ---
@@ -93,7 +104,7 @@ Several options:
 # Schedule
 
 * Intended mix of sync / async participation
-* Visual version + room sign up: [Goole Sheet](`r params$collab_schedule_link`)
+* Visual version + room sign up: [Goole Sheet](`r params_custom$collab_schedule_link`)
 * Written version: [Github wiki page](`r collab_wiki_link`)
 
 ---
@@ -113,7 +124,7 @@ Several options:
 # Birds of a Feather
 
 * Open time over lunch to discuss a topic that's interesting to you
-* If there's something you want to discuss, [sign up](`r params$collab_schedule_link`)!
+* If there's something you want to discuss, [sign up](`r params_custom$collab_schedule_link`)!
 * Topic ideas:
     + Data visualization
     + Causal inference
@@ -127,4 +138,4 @@ Several options:
 
 Don't hesitate to ask us about anything!
 
-``r params$collab_slack_faq`` for future Qs
+``r params_custom$collab_slack_faq`` for future Qs
