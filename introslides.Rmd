@@ -1,0 +1,130 @@
+---
+title: "Welcome to {Your} R Collaborative"
+subtitle: "Work in progress"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+params:
+  collab_short: "Your R Collab"
+  collab_long: "Your R Collaborative"
+  collab_github: "https://github.com/repo_owner/repo_name"
+  coc_link: "https://yourdomain.github.io/coc/"
+  collab_email: "your_collab_email@somewhere.com"
+  coc_report_link: "https://your_report_link.com"
+  collab_slack_faq: "#collab-faq"
+  collab_schedule_link: "https://your_schedule_link.com"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+# set up key variables for processing later
+collab_wiki_link <- glue::glue("{collab_github}/wiki", collab_github = params$collab_github)
+```
+
+
+# Thank YOU!
+
+* You could have been doing anything today...
+* But you chose to join us for this event!
+* Especially a big thank you to our **mentors**
+
+.center[
+```{r thank_image, out.width = "40%"}
+knitr::include_graphics("http://bit.ly/momtocat")
+```
+]
+
+---
+
+# Code of Conduct
+
+The `r params$collab_long` (henceforth referred to as the "`r params$collab_short`") is dedicated to providing a **harrassment-free experience** for participants at our event.  The `r params$collab_short` is an informal, community-led hackathon intended for prefessional networking and collaboration in the R community.
+
+An inclusive space free of harrassment encourages interaction among diverse groups.  We want to **make certain our event is welcoming and encourages participants to be involved** moving forward.
+
+Read more: `r params$coc_link`
+
+---
+
+# Reporting
+
+Several options:
+
+* Message event organizers
+* Contact `r params$collab_email`
+* Fill out anonymous [report form](`r params$coc_report_link`)
+* IF needed, organizers can set up a chat with individual(s) affected
+* Let us know if you see things we should be aware of
+
+---
+
+# Event Organizers
+
+**TODO** Add custom R code chunk to loop through organizer avatars and create a row of pictures with their name below.  
+
+---
+
+# Need help?
+
+* __Zoom__ troubleshooting - **TODO add points of contact**
+* __Slack__ -  **TODO add points of contact**
+    + ``r params$collab_slack_faq`` for questions
+* __GitHub__ access - **TODO add points of contact**
+
+---
+
+# Zoom Basics
+
+* Mute/unmute + video/no video
+* Chat window
+* Screenshare
+* Reactions
+* Security - please keep the room links private!
+    + They will also __change tomorrow__ for security purposes.
+    + Be careful of screenshots you take - make sure they don't include meeting ID
+
+---
+
+# Schedule
+
+* Intended mix of sync / async participation
+* Visual version + room sign up: [Goole Sheet](`r params$collab_schedule_link`)
+* Written version: [Github wiki page](`r collab_wiki_link`)
+
+---
+
+# Schedule - Day 1
+
+**TODO**: Use `googlesheets` to dynamically extract the sheet for the schedule and print via `{DT}`, `{kableExtra}`, or other table printing package
+
+---
+
+# Schedule - Day 2
+
+**TODO**: Use `googlesheets` to dynamically extract the sheet for the schedule and print via `{DT}`, `{kableExtra}`, or other table printing package
+
+---
+
+# Birds of a Feather
+
+* Open time over lunch to discuss a topic that's interesting to you
+* If there's something you want to discuss, [sign up](`r params$collab_schedule_link`)!
+* Topic ideas:
+    + Data visualization
+    + Causal inference
+    + Reproducibility
+    + Communication and reporting
+    + Other ideas
+    
+---
+
+# Questions?
+
+Don't hesitate to ask us about anything!
+
+``r params$collab_slack_faq`` for future Qs
