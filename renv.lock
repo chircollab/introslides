@@ -275,6 +275,13 @@
       "Repository": "CRAN",
       "Hash": "f6a407ae5dd21f6f80a6708bbb6eb3ae"
     },
+    "servr": {
+      "Package": "servr",
+      "Version": "0.16",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d684af7ff774147144aceeeb481e91fe"
+    },
     "shiny": {
       "Package": "shiny",
       "Version": "1.4.0.2",
@@ -356,6 +363,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0ee89e6cb58182d39b30a5b506e04808"
+    },
+    "xaringan": {
+      "Package": "xaringan",
+      "Version": "0.16",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7168ed8f41f3597c6c570477c0d0bf15"
     },
     "xfun": {
       "Package": "xfun",
