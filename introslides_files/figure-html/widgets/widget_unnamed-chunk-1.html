@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="calendar_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="calendar_libs/tui-code-snippet-1.5.1/tui-code-snippet.min.js"></script>
+<link href="calendar_libs/tui-time-picker-1.5.2/tui-time-picker.css" rel="stylesheet" />
+<script src="calendar_libs/tui-time-picker-1.5.2/tui-time-picker.min.js"></script>
+<link href="calendar_libs/tui-date-picker-3.3.3/tui-date-picker.css" rel="stylesheet" />
+<script src="calendar_libs/tui-date-picker-3.3.3/tui-date-picker.min.js"></script>
+<link href="calendar_libs/tui-calendar-1.12.12/tui-calendar.min.css" rel="stylesheet" />
+<script src="calendar_libs/tui-calendar-1.12.12/tui-calendar.min.js"></script>
+<script src="calendar_libs/moment-2.24.0/moment.min.js"></script>
+<link href="calendar_libs/bttn-0.2.4/bttn.min.css" rel="stylesheet" />
+<script src="calendar_libs/calendar-binding-0.0.1.9300/calendar.js"></script>
+<script src="calendar_libs/pymjs-1.3.2/pym.v1.min.js"></script>
+<link href="calendar_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="calendar_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+  <title>calendar</title>
+</head>
+<body>
+<div id="htmlwidget_container">
+  <div id="htmlwidget-c147ffdb5b609c8b4b92_menu">
+    <span id="htmlwidget-c147ffdb5b609c8b4b92_menu_navi">
+      <button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-c147ffdb5b609c8b4b92_today">Today</button>
+      <button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-c147ffdb5b609c8b4b92_prev">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <button type="button" class="btn bttn-no-outline action-button" id="htmlwidget-c147ffdb5b609c8b4b92_next">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </span>
+    <span id="htmlwidget-c147ffdb5b609c8b4b92_renderRange" class="render-range"></span>
+  </div>
+  <br/>
+  <div id="htmlwidget-c147ffdb5b609c8b4b92" style="width:100%;height:400px;" class="calendar html-widget" width="100%" height="400"></div>
+  <script>HTMLWidgets.pymChild = new pym.Child();HTMLWidgets.addPostRenderHandler(function(){
+                                setTimeout(function(){HTMLWidgets.pymChild.sendHeight();},100);
+                            });</script>
+</div>
+<script type="application/json" data-for="htmlwidget-c147ffdb5b609c8b4b92">{"x":{"options":{"defaultView":"day","taskView":false,"scheduleView":true,"useDetailPopup":true,"useCreationPopup":false,"isReadOnly":true,"usageStatistics":false,"calendars":[{"id":"rm1","name":"Room 1","color":"#FFF","bgColor":"#6CA6CD","borderColor":"#000000"},{"id":"rm2","name":"Room 2","color":"#FFF","bgColor":"#228B22","borderColor":"#000000"},{"id":"rm3","name":"Room 3","color":"#FFF","bgColor":"#FFC125","borderColor":"#000000"}]},"schedules":[{"category":"time","dueDateClass":"","id":601022,"calendarId":"rm1","title":"Intros/Icebreakers","body":"Introductions & Icebreakers","start":"2020-04-18 10:00:00","end":"2020-04-18 11:00:00"},{"category":"time","dueDateClass":"","id":607622,"calendarId":"rm1","title":"Project Pitches","body":"Project Pitches & Discussion","start":"2020-04-18 11:00:00","end":"2020-04-18 12:00:00"},{"category":"time","dueDateClass":"","id":327050,"calendarId":"rm1","title":"Reservable time","body":"Reservable time for tutorials/demos","start":"2020-04-18 12:00:00","end":"2020-04-18 16:00:00"},{"category":"time","dueDateClass":"","id":779115,"calendarId":"rm2","title":"Reservable time","body":"Reservable time for tutorials/demos","start":"2020-04-18 12:00:00","end":"2020-04-18 16:00:00"},{"category":"time","dueDateClass":"","id":957767,"calendarId":"rm3","title":"Reservable time","body":"Reservable time for tutorials/demos","start":"2020-04-18 12:00:00","end":"2020-04-18 16:00:00"},{"category":"time","dueDateClass":"","id":193497,"calendarId":"rm1","title":"Regroup/share out","body":"Regroup and share","start":"2020-04-18 16:00:00","end":"2020-04-18 16:30:00"},{"category":"time","dueDateClass":"","id":60928,"calendarId":"rm1","title":"Open room","body":"Open room for socialization/chat","start":"2020-04-18 16:30:00","end":"2020-04-18 17:30:00"},{"category":"time","dueDateClass":"","id":182090,"calendarId":"rm2","title":"Open room","body":"Open room for socialization/chat","start":"2020-04-18 16:30:00","end":"2020-04-18 17:30:00"},{"category":"time","dueDateClass":"","id":226933,"calendarId":"rm3","title":"Open room","body":"Open room for socialization/chat","start":"2020-04-18 16:30:00","end":"2020-04-18 17:30:00"},{"category":"time","dueDateClass":"","id":639735,"calendarId":"rm1","title":"Virtual project stand-up","body":"Quick recap of project status","start":"2020-04-19 9:00:00","end":"2020-04-19 9:30:00"},{"category":"time","dueDateClass":"","id":830183,"calendarId":"rm1","title":"Reservable time","body":"Reservable time for tutorials/demos","start":"2020-04-19 9:30:00","end":"2020-04-19 14:30:00"},{"category":"time","dueDateClass":"","id":968189,"calendarId":"rm2","title":"Reservable time","body":"Reservable time for tutorials/demos","start":"2020-04-19 9:30:00","end":"2020-04-19 14:30:00"},{"category":"time","dueDateClass":"","id":711351,"calendarId":"rm3","title":"Reservable time","body":"Reservable time for tutorials/demos","start":"2020-04-19 9:30:00","end":"2020-04-19 14:30:00"},{"category":"time","dueDateClass":"","id":898925,"calendarId":"rm1","title":"Project demo prep","body":"Prep time for demo!","start":"2020-04-19 14:30:00","end":"2020-04-19 15:00:00"},{"category":"time","dueDateClass":"","id":18077,"calendarId":"rm2","title":"Project demo prep","body":"Prep time for demo!","start":"2020-04-19 14:30:00","end":"2020-04-19 15:00:00"},{"category":"time","dueDateClass":"","id":631303,"calendarId":"rm3","title":"Project demo prep","body":"Prep time for demo!","start":"2020-04-19 14:30:00","end":"2020-04-19 15:00:00"},{"category":"time","dueDateClass":"","id":952005,"calendarId":"rm1","title":"Project Demos","body":"Recorded project demos","start":"2020-04-19 15:00:00","end":"2020-04-19 16:00:00"},{"category":"time","dueDateClass":"","id":405520,"calendarId":"rm1","title":"Open room","body":"Open room for socialization/chat","start":"2020-04-19 16:00:00","end":"2020-04-19 17:30:00"},{"category":"time","dueDateClass":"","id":267998,"calendarId":"rm2","title":"Open room","body":"Open room for socialization/chat","start":"2020-04-19 16:00:00","end":"2020-04-19 17:30:00"},{"category":"time","dueDateClass":"","id":878114,"calendarId":"rm3","title":"Open room","body":"Open room for socialization/chat","start":"2020-04-19 16:00:00","end":"2020-04-19 17:30:00"}],"useNav":true,"defaultDate":"2020-04-18","events":[],"bttnOpts":{"today_label":"Today","prev_label":"<i class=\"fa fa-chevron-left\"><\/i>","next_label":"<i class=\"fa fa-chevron-right\"><\/i>","class":" bttn-jelly bttn-sm bttn-primary"}},"evals":[],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-c147ffdb5b609c8b4b92">{"viewer":{"width":"100%","height":"400","padding":0,"fill":false},"browser":{"width":"100%","height":"400","padding":0,"fill":false}}</script>
+</body>
+</html>

@@ -21,7 +21,18 @@ params:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+# load packages
+library(dplyr)
+library(tuicalendr)
+library(widgetframe)
+
+# set knitr options
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  widgetframe_self_contained = FALSE,
+  widgetframe_isolate_widgets = TRUE
+)
 
 # override custom configuration if present
 proj_root <- here::here()
@@ -109,15 +120,53 @@ Several options:
 
 ---
 
-# Schedule - Day 1
+```{r schedule-play, include=FALSE}
+# this is a simple demo of how we can use the {tuicalendr} package to create a javascript calendar!
+# create data frame that mimics the r collab schedule 
+my_schedules <- tibble::tribble(
+  ~title,                     ~body,                           ~start,               ~end,                 ~calendarId, ~category,
+  # Day one
+  "Intros/Icebreakers", "Introductions & Icebreakers", "2020-04-18 10:00:00", "2020-04-18 11:00:00", "rm1", "time",
+  "Project Pitches", "Project Pitches & Discussion",   "2020-04-18 11:00:00", "2020-04-18 12:00:00", "rm1", "time",
+  "Reservable time", "Reservable time for tutorials/demos",    "2020-04-18 12:00:00", "2020-04-18 16:00:00", "rm1", "time",
+  "Reservable time", "Reservable time for tutorials/demos",    "2020-04-18 12:00:00", "2020-04-18 16:00:00", "rm2", "time",
+  "Reservable time", "Reservable time for tutorials/demos",    "2020-04-18 12:00:00", "2020-04-18 16:00:00", "rm3", "time",
+  "Regroup/share out", "Regroup and share",   "2020-04-18 16:00:00", "2020-04-18 16:30:00", "rm1", "time",
+  "Open room", "Open room for socialization/chat",    "2020-04-18 16:30:00", "2020-04-18 17:30:00", "rm1", "time",
+  "Open room", "Open room for socialization/chat",    "2020-04-18 16:30:00", "2020-04-18 17:30:00", "rm2", "time",
+  "Open room", "Open room for socialization/chat",    "2020-04-18 16:30:00", "2020-04-18 17:30:00", "rm3", "time",
+  
+  # Day two
+  "Virtual project stand-up", "Quick recap of project status", "2020-04-19 9:00:00", "2020-04-19 9:30:00", "rm1", "time",
+  "Reservable time", "Reservable time for tutorials/demos",    "2020-04-19 9:30:00", "2020-04-19 14:30:00", "rm1", "time",
+  "Reservable time", "Reservable time for tutorials/demos",    "2020-04-19 9:30:00", "2020-04-19 14:30:00", "rm2", "time",
+  "Reservable time", "Reservable time for tutorials/demos",    "2020-04-19 9:30:00", "2020-04-19 14:30:00", "rm3", "time",
+  "Project demo prep", "Prep time for demo!",    "2020-04-19 14:30:00", "2020-04-19 15:00:00", "rm1", "time",
+  "Project demo prep", "Prep time for demo!",    "2020-04-19 14:30:00", "2020-04-19 15:00:00", "rm2", "time",
+  "Project demo prep", "Prep time for demo!",    "2020-04-19 14:30:00", "2020-04-19 15:00:00", "rm3", "time",
+  "Project Demos", "Recorded project demos", "2020-04-19 15:00:00", "2020-04-19 16:00:00", "rm1", "time",
+  "Open room", "Open room for socialization/chat",    "2020-04-19 16:00:00", "2020-04-19 17:30:00", "rm1", "time",
+  "Open room", "Open room for socialization/chat",    "2020-04-19 16:00:00", "2020-04-19 17:30:00", "rm2", "time",
+  "Open room", "Open room for socialization/chat",    "2020-04-19 16:00:00", "2020-04-19 17:30:00", "rm3", "time"
+)
 
-**TODO**: Use `googlesheets` to dynamically extract the sheet for the schedule and print via `{DT}`, `{kableExtra}`, or other table printing package
+cal_props <- tibble::tribble(
+  ~id,       ~name,    ~color,   ~bgColor,   ~borderColor,
+  "rm1",     "Room 1", "#FFF",    "#6CA6CD", "#000000",
+  "rm2",     "Room 2", "#FFF",    "#228B22", "#000000",
+  "rm3",     "Room 3", "#FFF",    "#FFC125", "#000000"
+)
 
----
+cal_widget <- calendar(defaultView = "day", defaultDate = "2020-04-18", useNav = TRUE) %>%
+  add_schedule_df(my_schedules) %>%
+  set_calendars_props_df(cal_props)
+```
 
-# Schedule - Day 2
+# Schedule - widget
 
-**TODO**: Use `googlesheets` to dynamically extract the sheet for the schedule and print via `{DT}`, `{kableExtra}`, or other table printing package
+```{r}
+frameWidget(cal_widget, width = "100%", height = "400")
+```
 
 ---
 
