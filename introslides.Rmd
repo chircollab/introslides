@@ -48,6 +48,12 @@ if (fs::file_exists(config_path)) {
 collab_wiki_link <- glue::glue("{collab_github}/wiki", collab_github = params_custom$collab_github)
 ```
 
+layout: true
+background-image: url(figures/logo.png)
+background-position: 100% 95%
+background-size: 10%
+
+---
 
 # Thank YOU!
 
