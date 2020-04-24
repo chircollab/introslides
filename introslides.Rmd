@@ -5,10 +5,12 @@ date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    css: xaringan-themer.css
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: "16:9"
 params:
   collab_short: "Your R Collab"
   collab_long: "Your R Collaborative"
@@ -47,6 +49,17 @@ if (fs::file_exists(config_path)) {
 # set up key variables for processing later
 collab_wiki_link <- glue::glue("{collab_github}/wiki", collab_github = params_custom$collab_github)
 ```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
 
 layout: true
 background-image: url(figures/logo.png)

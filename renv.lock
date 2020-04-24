@@ -58,6 +58,13 @@
       "Repository": "CRAN",
       "Hash": "ff0becff7bfdfe3f75d29aff8f3172dd"
     },
+    "colorspace": {
+      "Package": "colorspace",
+      "Version": "1.4-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6b436e95723d1f0e861224dd9b094dfb"
+    },
     "config": {
       "Package": "config",
       "Version": "0.3",
@@ -357,6 +364,13 @@
       "Repository": "CRAN",
       "Hash": "6c839a149a30cb4ffc70443efa74c197"
     },
+    "whisker": {
+      "Package": "whisker",
+      "Version": "0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ca970b96d894e90397ed20637a0c1bbe"
+    },
     "widgetframe": {
       "Package": "widgetframe",
       "Version": "0.3.1",
@@ -370,6 +384,18 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "7168ed8f41f3597c6c570477c0d0bf15"
+    },
+    "xaringanthemer": {
+      "Package": "xaringanthemer",
+      "Version": "0.2.0.9100",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "xaringanthemer",
+      "RemoteRef": "master",
+      "RemoteSha": "9e27e3522a34ab17f608169c2466743bd9e9d1b3",
+      "Hash": "961150481f6176fb03b270b8b5811fa3"
     },
     "xfun": {
       "Package": "xfun",
