@@ -51,6 +51,7 @@ collab_wiki_link <- glue::glue("{collab_github}/wiki", collab_github = params_cu
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(showtext)
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#1c5253",
@@ -63,7 +64,7 @@ style_mono_accent(
 
 layout: true
 background-image: url(figures/logo.png)
-background-position: 100% 95%
+background-position: 100% 90%
 background-size: 10%
 
 ---
@@ -75,7 +76,7 @@ background-size: 10%
 * Especially a big thank you to our **mentors**
 
 .center[
-```{r thank_image, out.width = "40%"}
+```{r thank_image, out.width = "35%"}
 knitr::include_graphics("http://bit.ly/momtocat")
 ```
 ]
