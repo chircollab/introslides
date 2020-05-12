@@ -296,6 +296,20 @@
       "Repository": "CRAN",
       "Hash": "a56d058adfc9df30bdd45dbb01cec39f"
     },
+    "showtext": {
+      "Package": "showtext",
+      "Version": "0.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8fd6ed41b06cff243d8c6cb0bf441ebd"
+    },
+    "showtextdb": {
+      "Package": "showtextdb",
+      "Version": "2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8e0df803ddce30dddcec4c4c09af8676"
+    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7",
@@ -316,6 +330,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
+    },
+    "sysfonts": {
+      "Package": "sysfonts",
+      "Version": "0.8.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "49ed30f4a8938fb04551dced5b6d444e"
     },
     "tibble": {
       "Package": "tibble",
