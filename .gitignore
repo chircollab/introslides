@@ -7,3 +7,4 @@ prototyping/*
 config/*
 !config/README.md
 introslides.html
+.vscode/
